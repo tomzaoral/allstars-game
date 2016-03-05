@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crosshair" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-qB-LW7">
-                                        <rect key="frame" x="910" y="490" width="100" height="100"/>
+                                        <rect key="frame" x="860" y="440" width="200" height="200"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,7 +42,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="V3k-sT-dJk" firstAttribute="leading" secondItem="k4W-6V-kTm" secondAttribute="trailing" constant="8" id="FTn-ib-9qN"/>
                                     <constraint firstItem="k4W-6V-kTm" firstAttribute="top" secondItem="Y7g-n2-Gxe" secondAttribute="top" constant="8" id="PYe-2r-qap"/>

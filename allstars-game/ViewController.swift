@@ -60,9 +60,7 @@ class ViewController: UIViewController {
         
     }
     
-    func fire() {
-		print("kill")
-		
+    func fire() {		
         let crosshairPosition = crosshair.center
         
         let index = monsters.indexOf { CGRectContainsPoint($0.imageView!.frame, crosshairPosition) }
