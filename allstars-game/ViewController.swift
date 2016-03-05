@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let pan = UIPanGestureRecognizer(target: self, action: "move")
+        let pan = UIPanGestureRecognizer(target: self, action: "move:")
         self.view.addGestureRecognizer(pan)
     }
 
@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     func move(sender: UIPanGestureRecognizer) {
         print("a")
         
-        let translatedPoint = sender.translationInView(self.view)
+        let locatedPoint = sender.locationInView(self.view)
         
-        crosshair.center = translatedPoint
+        crosshair.center = locatedPoint
         
     }
 
