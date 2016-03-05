@@ -37,7 +37,6 @@ class ViewController: UIViewController {
         do { monsterSoundPlayer = try AVAudioPlayer(contentsOfURL: monsterKillUrl, fileTypeHint: nil) }
         catch let error as NSError { print(error.description) }
         monsterSoundPlayer.prepareToPlay()
-        monsterSoundPlayer.play()
         
         addMonster()
         addMonster()
@@ -90,6 +89,9 @@ class ViewController: UIViewController {
             killSoundPlayer.play()
             
             scoreValue++
+            if scoreValue % 3 == 0 {
+                monsterSoundPlayer.play()
+            }
 			
 			UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
 				monster.imageView!.alpha = 0
