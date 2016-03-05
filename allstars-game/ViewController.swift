@@ -73,7 +73,6 @@ class ViewController: UIViewController {
             
             monster.imageView?.image = UIImage(named: "monster_\(arc4random_uniform(3) + 1)")
             
-            print(monster.imageView?.center)
         }
         
     }
@@ -97,7 +96,23 @@ class ViewController: UIViewController {
         let randomY = arc4random_uniform(UInt32(view.frame.height - 200)) + 1
         let randomX = arc4random_uniform(UInt32(view.frame.width - 200)) + 1
         
-        return CGRect(origin: CGPoint(x: Int(randomX), y: Int(randomY)), size: CGSize(width: 200, height: 200))
+        let newCoords = CGRect(origin: CGPoint(x: Int(randomX), y: Int(randomY)), size: CGSize(width: 200, height: 200))
+        
+        var intersect = false
+        for m in monsters {
+            let monsterCoords = m.imageView?.frame
+            
+            
+            if CGRectIntersectsRect(newCoords, monsterCoords!) {
+                intersect = true
+            }
+        }
+        
+        if intersect {
+            return getCoords()
+        } else {
+            return newCoords
+        }
     }
     
     
