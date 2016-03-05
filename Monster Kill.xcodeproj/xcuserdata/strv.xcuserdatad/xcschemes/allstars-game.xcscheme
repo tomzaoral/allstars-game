@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D95F99B1C8ADD60002ABA26"
-               BuildableName = "allstars-game.app"
-               BlueprintName = "allstars-game"
-               ReferencedContainer = "container:allstars-game.xcodeproj">
+               BuildableName = "Monster Kill.app"
+               BlueprintName = "Monster Kill"
+               ReferencedContainer = "container:Monster Kill.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D95F9AC1C8ADD60002ABA26"
-               BuildableName = "allstars-gameTests.xctest"
-               BlueprintName = "allstars-gameTests"
-               ReferencedContainer = "container:allstars-game.xcodeproj">
+               BuildableName = "Monster Kill.xctest"
+               BlueprintName = "Monster KillTests"
+               ReferencedContainer = "container:Monster Kill.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D95F9B71C8ADD60002ABA26"
-               BuildableName = "allstars-gameUITests.xctest"
-               BlueprintName = "allstars-gameUITests"
-               ReferencedContainer = "container:allstars-game.xcodeproj">
+               BuildableName = "Monster Kill.xctest"
+               BlueprintName = "Monster KillUITests"
+               ReferencedContainer = "container:Monster Kill.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D95F99B1C8ADD60002ABA26"
-            BuildableName = "allstars-game.app"
-            BlueprintName = "allstars-game"
-            ReferencedContainer = "container:allstars-game.xcodeproj">
+            BuildableName = "Monster Kill.app"
+            BlueprintName = "Monster Kill"
+            ReferencedContainer = "container:Monster Kill.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D95F99B1C8ADD60002ABA26"
-            BuildableName = "allstars-game.app"
-            BlueprintName = "allstars-game"
-            ReferencedContainer = "container:allstars-game.xcodeproj">
+            BuildableName = "Monster Kill.app"
+            BlueprintName = "Monster Kill"
+            ReferencedContainer = "container:Monster Kill.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D95F99B1C8ADD60002ABA26"
-            BuildableName = "allstars-game.app"
-            BlueprintName = "allstars-game"
-            ReferencedContainer = "container:allstars-game.xcodeproj">
+            BuildableName = "Monster Kill.app"
+            BlueprintName = "Monster Kill"
+            ReferencedContainer = "container:Monster Kill.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

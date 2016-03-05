@@ -36,16 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D95F99C1C8ADD60002ABA26 /* allstars-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "allstars-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D95F99C1C8ADD60002ABA26 /* Monster Kill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monster Kill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D95F99F1C8ADD60002ABA26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D95F9A11C8ADD60002ABA26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D95F9A41C8ADD60002ABA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D95F9A61C8ADD60002ABA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D95F9A81C8ADD60002ABA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D95F9AD1C8ADD60002ABA26 /* allstars-gameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "allstars-gameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D95F9AD1C8ADD60002ABA26 /* Monster Kill.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Monster Kill.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D95F9B11C8ADD60002ABA26 /* allstars_gameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allstars_gameTests.swift; sourceTree = "<group>"; };
 		3D95F9B31C8ADD60002ABA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D95F9B81C8ADD60002ABA26 /* allstars-gameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "allstars-gameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D95F9B81C8ADD60002ABA26 /* Monster Kill.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Monster Kill.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D95F9BC1C8ADD60002ABA26 /* allstars_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allstars_gameUITests.swift; sourceTree = "<group>"; };
 		3D95F9BE1C8ADD60002ABA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D95F9CA1C8B277D002ABA26 /* kill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kill.mp3; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		3D95F99D1C8ADD60002ABA26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D95F99C1C8ADD60002ABA26 /* allstars-game.app */,
-				3D95F9AD1C8ADD60002ABA26 /* allstars-gameTests.xctest */,
-				3D95F9B81C8ADD60002ABA26 /* allstars-gameUITests.xctest */,
+				3D95F99C1C8ADD60002ABA26 /* Monster Kill.app */,
+				3D95F9AD1C8ADD60002ABA26 /* Monster Kill.xctest */,
+				3D95F9B81C8ADD60002ABA26 /* Monster Kill.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3D95F99B1C8ADD60002ABA26 /* allstars-game */ = {
+		3D95F99B1C8ADD60002ABA26 /* Monster Kill */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D95F9C11C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "allstars-game" */;
+			buildConfigurationList = 3D95F9C11C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "Monster Kill" */;
 			buildPhases = (
 				3D95F9981C8ADD60002ABA26 /* Sources */,
 				3D95F9991C8ADD60002ABA26 /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = "allstars-game";
+			name = "Monster Kill";
 			productName = "allstars-game";
-			productReference = 3D95F99C1C8ADD60002ABA26 /* allstars-game.app */;
+			productReference = 3D95F99C1C8ADD60002ABA26 /* Monster Kill.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3D95F9AC1C8ADD60002ABA26 /* allstars-gameTests */ = {
+		3D95F9AC1C8ADD60002ABA26 /* Monster KillTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D95F9C41C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "allstars-gameTests" */;
+			buildConfigurationList = 3D95F9C41C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "Monster KillTests" */;
 			buildPhases = (
 				3D95F9A91C8ADD60002ABA26 /* Sources */,
 				3D95F9AA1C8ADD60002ABA26 /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				3D95F9AF1C8ADD60002ABA26 /* PBXTargetDependency */,
 			);
-			name = "allstars-gameTests";
+			name = "Monster KillTests";
 			productName = "allstars-gameTests";
-			productReference = 3D95F9AD1C8ADD60002ABA26 /* allstars-gameTests.xctest */;
+			productReference = 3D95F9AD1C8ADD60002ABA26 /* Monster Kill.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3D95F9B71C8ADD60002ABA26 /* allstars-gameUITests */ = {
+		3D95F9B71C8ADD60002ABA26 /* Monster KillUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D95F9C71C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "allstars-gameUITests" */;
+			buildConfigurationList = 3D95F9C71C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "Monster KillUITests" */;
 			buildPhases = (
 				3D95F9B41C8ADD60002ABA26 /* Sources */,
 				3D95F9B51C8ADD60002ABA26 /* Frameworks */,
@@ -182,9 +182,9 @@
 			dependencies = (
 				3D95F9BA1C8ADD60002ABA26 /* PBXTargetDependency */,
 			);
-			name = "allstars-gameUITests";
+			name = "Monster KillUITests";
 			productName = "allstars-gameUITests";
-			productReference = 3D95F9B81C8ADD60002ABA26 /* allstars-gameUITests.xctest */;
+			productReference = 3D95F9B81C8ADD60002ABA26 /* Monster Kill.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D95F9971C8ADD60002ABA26 /* Build configuration list for PBXProject "allstars-game" */;
+			buildConfigurationList = 3D95F9971C8ADD60002ABA26 /* Build configuration list for PBXProject "Monster Kill" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -223,9 +223,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D95F99B1C8ADD60002ABA26 /* allstars-game */,
-				3D95F9AC1C8ADD60002ABA26 /* allstars-gameTests */,
-				3D95F9B71C8ADD60002ABA26 /* allstars-gameUITests */,
+				3D95F99B1C8ADD60002ABA26 /* Monster Kill */,
+				3D95F9AC1C8ADD60002ABA26 /* Monster KillTests */,
+				3D95F9B71C8ADD60002ABA26 /* Monster KillUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,12 +290,12 @@
 /* Begin PBXTargetDependency section */
 		3D95F9AF1C8ADD60002ABA26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D95F99B1C8ADD60002ABA26 /* allstars-game */;
+			target = 3D95F99B1C8ADD60002ABA26 /* Monster Kill */;
 			targetProxy = 3D95F9AE1C8ADD60002ABA26 /* PBXContainerItemProxy */;
 		};
 		3D95F9BA1C8ADD60002ABA26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D95F99B1C8ADD60002ABA26 /* allstars-game */;
+			target = 3D95F99B1C8ADD60002ABA26 /* Monster Kill */;
 			targetProxy = 3D95F9B91C8ADD60002ABA26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -401,7 +401,7 @@
 				INFOPLIST_FILE = "allstars-game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.allstars-game";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Monster Kill";
 			};
 			name = Debug;
 		};
@@ -413,7 +413,7 @@
 				INFOPLIST_FILE = "allstars-game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.allstars-game";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Monster Kill";
 			};
 			name = Release;
 		};
@@ -424,8 +424,8 @@
 				INFOPLIST_FILE = "allstars-gameTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.allstars-gameTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/allstars-game.app/allstars-game";
+				PRODUCT_NAME = "Monster Kill";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monster Kill.app/Monster Kill";
 			};
 			name = Debug;
 		};
@@ -436,8 +436,8 @@
 				INFOPLIST_FILE = "allstars-gameTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.allstars-gameTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/allstars-game.app/allstars-game";
+				PRODUCT_NAME = "Monster Kill";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monster Kill.app/Monster Kill";
 			};
 			name = Release;
 		};
@@ -447,7 +447,7 @@
 				INFOPLIST_FILE = "allstars-gameUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.allstars-gameUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Monster Kill";
 				TEST_TARGET_NAME = "allstars-game";
 				USES_XCTRUNNER = YES;
 			};
@@ -459,7 +459,7 @@
 				INFOPLIST_FILE = "allstars-gameUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.allstars-gameUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Monster Kill";
 				TEST_TARGET_NAME = "allstars-game";
 				USES_XCTRUNNER = YES;
 			};
@@ -468,7 +468,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D95F9971C8ADD60002ABA26 /* Build configuration list for PBXProject "allstars-game" */ = {
+		3D95F9971C8ADD60002ABA26 /* Build configuration list for PBXProject "Monster Kill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D95F9BF1C8ADD60002ABA26 /* Debug */,
@@ -477,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D95F9C11C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "allstars-game" */ = {
+		3D95F9C11C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "Monster Kill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D95F9C21C8ADD60002ABA26 /* Debug */,
@@ -486,7 +486,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D95F9C41C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "allstars-gameTests" */ = {
+		3D95F9C41C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "Monster KillTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D95F9C51C8ADD60002ABA26 /* Debug */,
@@ -495,7 +495,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D95F9C71C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "allstars-gameUITests" */ = {
+		3D95F9C71C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "Monster KillUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D95F9C81C8ADD60002ABA26 /* Debug */,
