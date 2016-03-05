@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         let pan = UIPanGestureRecognizer(target: self, action: "move:")
         self.view.addGestureRecognizer(pan)
         
+        let tap = UITapGestureRecognizer(target: self, action: "fire")
+        self.view.addGestureRecognizer(tap)
+        
         let _ = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "addMonster", userInfo: nil, repeats: true)
         
         
@@ -45,6 +48,19 @@ class ViewController: UIViewController {
 
 		}
         
+    }
+    
+    func fire() {
+        let crosshairPosition = crosshair.center
+        
+        for m in monsters {
+            if CGRectContainsPoint(m.imageView!.frame, crosshairPosition) {
+                
+                let monsterIndex = monsters.indexOf(m)
+                monsters.removeAtIndex(monsterIndex)
+            }
+        }
+
     }
     
     func addMonster() {
