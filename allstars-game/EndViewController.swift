@@ -12,10 +12,12 @@ class EndViewController: UIViewController {
 
 	@IBOutlet weak var timeLabel: UILabel!
 	
+	var resultTime: Int?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        timeLabel.text = "\(resultTime!) s"
     }
 
 }
