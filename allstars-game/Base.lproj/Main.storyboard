@@ -17,28 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arf-NM-YTo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hellbg" translatesAutoresizingMaskIntoConstraints="NO" id="ncd-y5-n7r">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crosshair" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-qB-LW7">
-                                        <rect key="frame" x="860" y="440" width="200" height="200"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-n2-Gxe">
                                 <rect key="frame" x="30" y="18" width="240" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4W-6V-kTm">
                                         <rect key="frame" x="8" y="8" width="112" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3k-sT-dJk">
                                         <rect key="frame" x="128" y="8" width="20" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -51,15 +45,28 @@
                                     <constraint firstAttribute="height" constant="128" id="uTw-5x-zoa"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arf-NM-YTo">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crosshair" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-qB-LW7">
+                                        <rect key="frame" x="860" y="440" width="200" height="200"/>
+                                        <color key="tintColor" red="0.9902532696723938" green="0.96921223402023315" blue="0.2011837363243103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ncd-y5-n7r" secondAttribute="trailing" id="64R-6N-wxh"/>
                             <constraint firstItem="arf-NM-YTo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="93x-kM-cyb"/>
+                            <constraint firstItem="ncd-y5-n7r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DSH-lR-4Hz"/>
                             <constraint firstItem="Y7g-n2-Gxe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="O1k-CD-7Ld"/>
                             <constraint firstItem="arf-NM-YTo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VVi-fd-vlh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="arf-NM-YTo" secondAttribute="bottom" id="Ywi-vr-aiu"/>
                             <constraint firstItem="Y7g-n2-Gxe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="aZK-La-Tvq"/>
                             <constraint firstAttribute="trailing" secondItem="arf-NM-YTo" secondAttribute="trailing" id="gso-GD-9bj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ncd-y5-n7r" secondAttribute="bottom" id="p2W-Lp-MS6"/>
+                            <constraint firstItem="ncd-y5-n7r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="udm-W9-iNA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -75,5 +82,6 @@
     </scenes>
     <resources>
         <image name="crosshair" width="670" height="669"/>
+        <image name="hellbg" width="1920" height="1080"/>
     </resources>
 </document>
