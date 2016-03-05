@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -23,6 +24,21 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: "fire")
         self.view.addGestureRecognizer(tap)
         
+        let kill = NSBundle.mainBundle().pathForResource("kill", ofType: "mp3")!
+        let killUrl = NSURL(fileURLWithPath: kill)
+        do { killSoundPlayer = try AVAudioPlayer(contentsOfURL: killUrl, fileTypeHint: nil) }
+        catch let error as NSError { print(error.description) }
+        
+        killSoundPlayer.numberOfLoops = 0
+        killSoundPlayer.prepareToPlay()
+        
+        let monsterKill = NSBundle.mainBundle().pathForResource("monsterKill", ofType: "mp3")!
+        let monsterKillUrl = NSURL(fileURLWithPath: monsterKill)
+        do { monsterSoundPlayer = try AVAudioPlayer(contentsOfURL: monsterKillUrl, fileTypeHint: nil) }
+        catch let error as NSError { print(error.description) }
+        monsterSoundPlayer.prepareToPlay()
+        monsterSoundPlayer.play()
+        
         addMonster()
         addMonster()
         addMonster()
@@ -30,6 +46,9 @@ class ViewController: UIViewController {
         addMonster()
         
     }
+    
+    var killSoundPlayer = AVAudioPlayer()
+    var monsterSoundPlayer = AVAudioPlayer()
     
     var monsters: [Monster] = []
     
@@ -67,6 +86,8 @@ class ViewController: UIViewController {
         
         if let i = index {
             let monster = monsters[i]
+            
+            killSoundPlayer.play()
             
             scoreValue++
 			

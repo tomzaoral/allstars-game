@@ -13,6 +13,8 @@
 		3D95F9A71C8ADD60002ABA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D95F9A61C8ADD60002ABA26 /* Assets.xcassets */; };
 		3D95F9B21C8ADD60002ABA26 /* allstars_gameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95F9B11C8ADD60002ABA26 /* allstars_gameTests.swift */; };
 		3D95F9BD1C8ADD60002ABA26 /* allstars_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95F9BC1C8ADD60002ABA26 /* allstars_gameUITests.swift */; };
+		3D95F9CB1C8B277D002ABA26 /* kill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D95F9CA1C8B277D002ABA26 /* kill.mp3 */; };
+		3D95F9CD1C8B28A6002ABA26 /* monsterKill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D95F9CC1C8B28A6002ABA26 /* monsterKill.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		3D95F9B81C8ADD60002ABA26 /* allstars-gameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "allstars-gameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D95F9BC1C8ADD60002ABA26 /* allstars_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allstars_gameUITests.swift; sourceTree = "<group>"; };
 		3D95F9BE1C8ADD60002ABA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D95F9CA1C8B277D002ABA26 /* kill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kill.mp3; sourceTree = "<group>"; };
+		3D95F9CC1C8B28A6002ABA26 /* monsterKill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = monsterKill.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				3D95F9A31C8ADD60002ABA26 /* Main.storyboard */,
 				3D95F9A61C8ADD60002ABA26 /* Assets.xcassets */,
 				3D95F9A81C8ADD60002ABA26 /* Info.plist */,
+				3D95F9CC1C8B28A6002ABA26 /* monsterKill.mp3 */,
+				3D95F9CA1C8B277D002ABA26 /* kill.mp3 */,
 			);
 			path = "allstars-game";
 			sourceTree = "<group>";
@@ -227,7 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D95F9A71C8ADD60002ABA26 /* Assets.xcassets in Resources */,
+				3D95F9CD1C8B28A6002ABA26 /* monsterKill.mp3 in Resources */,
 				3D95F9A51C8ADD60002ABA26 /* Main.storyboard in Resources */,
+				3D95F9CB1C8B277D002ABA26 /* kill.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
