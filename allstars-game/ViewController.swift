@@ -10,14 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+	@IBOutlet weak var playground: UIView!
     @IBOutlet weak var crosshair: UIImageView!
-    @IBOutlet weak var score: UILabel!
+	@IBOutlet weak var scoreView: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let pan = UIPanGestureRecognizer(target: self, action: "move:")
-        self.view.addGestureRecognizer(pan)
+        self.playground.addGestureRecognizer(pan)
         
         let tap = UITapGestureRecognizer(target: self, action: "fire")
         self.view.addGestureRecognizer(tap)
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
     
     var scoreValue: Int = 0 {
         didSet {
-//            score.text = "\(scoreValue)"
+            scoreView.text = "\(scoreValue)"
         }
     }
     
@@ -48,10 +49,10 @@ class ViewController: UIViewController {
             
         } else if sender.state == .Changed {
             
-            let translation = sender.translationInView(self.view)
+            let translation = sender.translationInView(self.playground)
             
-            let newX = max(min(lastPosition.x + translation.x, view.frame.width), 0)
-            let newY = max(min(lastPosition.y + translation.y, view.frame.height), 0)
+            let newX = max(min(lastPosition.x + translation.x, playground.frame.width), 0)
+            let newY = max(min(lastPosition.y + translation.y, playground.frame.height), 0)
             
             crosshair.center = CGPoint(x: newX, y: newY)
             
@@ -60,6 +61,8 @@ class ViewController: UIViewController {
     }
     
     func fire() {
+		print("kill")
+		
         let crosshairPosition = crosshair.center
         
         let index = monsters.indexOf { CGRectContainsPoint($0.imageView!.frame, crosshairPosition) }
@@ -91,7 +94,7 @@ class ViewController: UIViewController {
         
         imageview.frame = getCoords()
         
-        view.insertSubview(imageview, belowSubview: crosshair)
+        playground.insertSubview(imageview, belowSubview: crosshair)
         
         let monster = Monster()
         monster.imageView = imageview
@@ -100,8 +103,8 @@ class ViewController: UIViewController {
     }
     
     func getCoords() ->CGRect {
-        let randomY = arc4random_uniform(UInt32(view.frame.height - 200)) + 1
-        let randomX = arc4random_uniform(UInt32(view.frame.width - 200)) + 1
+        let randomY = arc4random_uniform(UInt32(playground.frame.height - 200)) + 1
+        let randomX = arc4random_uniform(UInt32(playground.frame.width - 200)) + 1
         
         let newCoords = CGRect(origin: CGPoint(x: Int(randomX), y: Int(randomY)), size: CGSize(width: 200, height: 200))
         
