@@ -46,6 +46,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         addMonster()
         addMonster()
         
+        scoreValue = 10
+        
     }
     
     var killSoundPlayer = AVAudioPlayer()
@@ -55,7 +57,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var lastPosition: CGPoint = CGPoint(x: 960, y: 540)
     
-    var scoreValue: Int = 0 {
+    var scoreValue: Int = 10 {
         didSet {
             scoreView.text = "\(scoreValue)"
         }
@@ -90,9 +92,13 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             
             killSoundPlayer.play()
             
-            scoreValue++
-            if scoreValue % 3 == 0 {
+            scoreValue--
+            if (10 - scoreValue) % 3 == 0 {
                 monsterSoundPlayer.play()
+            }
+            
+            if scoreValue == 0 {
+                // game over
             }
 			
 			UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
@@ -149,7 +155,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
 	func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-		return true§
+		return true
 	}
 }
 
