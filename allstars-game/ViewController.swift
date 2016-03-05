@@ -24,27 +24,29 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	var lastPosition: CGPoint = CGPoint(x: 960, y: 540)
     
     func move(sender: UIPanGestureRecognizer) {
-//        if sender.state == .Began {
-//            
-//        }
-        
-//        if sender.state == .Ended {
-//            
-//        }
-        
-        if sender.state == .Changed {
-            let locatedPoint = sender.translationInView(self.view)
-            crosshair.center.x
-        
-            if 0...view.frame.height ~= locatedPoint.y && 0...view.frame.width ~= locatedPoint.x {
-                crosshair.center = locatedPoint
-            }
+		
+        if sender.state == .Began {
+            
         }
         
+        if sender.state == .Ended {
+			lastPosition = crosshair.center
+        }
+		
+        if sender.state == .Changed {
+            let translation = sender.translationInView(self.view)
+			
+			let newX = lastPosition.x + translation.x
+			let newY = lastPosition.y + translation.y
         
-
+//            if 0...view.frame.height ~= newX && 0...view.frame.width ~= newY {
+                crosshair.center = CGPoint(x: newX, y: newY)
+//            }
+        }
         
     }
 
