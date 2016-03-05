@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
 	@IBOutlet weak var playground: UIView!
     @IBOutlet weak var crosshair: UIImageView!
@@ -19,9 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let pan = UIPanGestureRecognizer(target: self, action: "move:")
+		pan.delegate = self
         self.playground.addGestureRecognizer(pan)
         
         let tap = UITapGestureRecognizer(target: self, action: "fire")
+		tap.delegate = self
         self.view.addGestureRecognizer(tap)
         
         let kill = NSBundle.mainBundle().pathForResource("kill", ofType: "mp3")!
@@ -146,7 +148,9 @@ class ViewController: UIViewController {
         }
     }
     
-    
+	func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+		return true§
+	}
 }
 
 class Monster {
