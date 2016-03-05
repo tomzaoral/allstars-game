@@ -30,7 +30,12 @@ class ViewController: UIViewController {
         
         let locatedPoint = sender.locationInView(self.view)
         
-        crosshair.center = locatedPoint
+        if 0...view.frame.height ~= locatedPoint.y && 0...view.frame.width ~= locatedPoint.x {
+            crosshair.center = locatedPoint
+        }
+        
+        
+
         
     }
 
