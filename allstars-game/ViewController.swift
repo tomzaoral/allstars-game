@@ -68,13 +68,20 @@ class ViewController: UIViewController {
             let monster = monsters[i]
             
             scoreValue++
-            
-            monster.imageView?.frame = getCoords()
-            
-            monster.imageView?.image = UIImage(named: "monster_\(arc4random_uniform(3) + 1)")
-            
-        }
-        
+			
+			UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+				monster.imageView!.alpha = 0
+				}, completion: { (_) -> Void in
+					
+					monster.imageView!.frame = self.getCoords()
+					monster.imageView!.image = UIImage(named: "monster_\(arc4random_uniform(3) + 1)")
+					
+					UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+						monster.imageView!.alpha = 1
+						}, completion: nil)
+					
+			})
+		}
     }
     
     func addMonster() {
