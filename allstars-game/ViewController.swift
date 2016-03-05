@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var crosshair: UIImageView!
+    @IBOutlet weak var score: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,12 @@ class ViewController: UIViewController {
     var monsters: [Monster] = []
 	
 	var lastPosition: CGPoint = CGPoint(x: 960, y: 540)
+    
+    var scoreValue: Int = 0 {
+        didSet {
+            score.text = "\(scoreValue)"
+        }
+    }
     
     func move(sender: UIPanGestureRecognizer) {
         
@@ -59,6 +66,8 @@ class ViewController: UIViewController {
 		
 		if let i = index {
 			let monster = monsters[i]
+            
+            scoreValue++
 			
 			let randomHeight = arc4random_uniform(UInt32(view.frame.height - 200)) + 1
 			let randomWidth = arc4random_uniform(UInt32(view.frame.width - 200)) + 1
@@ -89,6 +98,7 @@ class ViewController: UIViewController {
         
         monsters.append(monster)
     }
+    
 
 
 }
