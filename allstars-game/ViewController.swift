@@ -50,8 +50,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         addMonster()
         addMonster()
         
-        scoreValue = 3
-		timeLabel.text = "0:00"
+        scoreValue = 10
+		timeLabel.text = "0 s"
 		
 		date = NSDate()
 		timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTime", userInfo: nil, repeats: true)
@@ -106,9 +106,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     func fire() {		
         let crosshairPosition = crosshair.center
         
-        let index = monsters.indexOf { CGRectContainsPoint($0.imageView!.frame, crosshairPosition) }
+        let index = monsters.indexOf { CGRectContainsPoint($0.imageView!.frame, crosshairPosition) && !$0.isDead }
         
         if let i = index {
+			
             let monster = monsters[i]
             
             killSoundPlayer.play()
@@ -126,12 +127,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 				monster.imageView!.alpha = 0
 				}, completion: { (_) -> Void in
 					
-					monster.imageView!.frame = self.getCoords()
-					monster.imageView!.image = UIImage(named: "monster_\(arc4random_uniform(3) + 1)")
-					
-					UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
-						monster.imageView!.alpha = 1
-						}, completion: nil)
+					if self.scoreValue > 4 {
+						monster.imageView!.frame = self.getCoords()
+						monster.imageView!.image = UIImage(named: "monster_\(arc4random_uniform(3) + 1)")
+						
+						UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+							monster.imageView!.alpha = 1
+							}, completion: nil)
+					} else {
+						monster.isDead = true
+					}
 					
 			})
 		}
@@ -187,7 +192,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 }
 
 class Monster {
-    
+	
+	var isDead: Bool = false
+	
     var imageView: UIImageView?
     
 }
