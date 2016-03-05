@@ -21,10 +21,12 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: "fire")
         self.view.addGestureRecognizer(tap)
         
-        let _ = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "addMonster", userInfo: nil, repeats: true)
-        
-        
-
+        addMonster()
+        addMonster()
+		addMonster()
+		addMonster()
+		addMonster()
+		
     }
     
     var monsters: [Monster] = []
@@ -56,7 +58,16 @@ class ViewController: UIViewController {
 		let index = monsters.indexOf { CGRectContainsPoint($0.imageView!.frame, crosshairPosition) }
 		
 		if let i = index {
-			monsters.removeAtIndex(i)
+			let monster = monsters[i]
+			
+			let randomHeight = arc4random_uniform(UInt32(view.frame.height - 200)) + 1
+			let randomWidth = arc4random_uniform(UInt32(view.frame.width - 200)) + 1
+			
+			monster.imageView?.center = CGPoint(x: Int(randomWidth), y: Int(randomHeight))
+			
+			monster.imageView?.image = UIImage(named: "monster_\(arc4random_uniform(3) + 1)")
+			
+			print(monster.imageView?.center)
 		}
 
     }
@@ -70,8 +81,7 @@ class ViewController: UIViewController {
         let randomWidth = arc4random_uniform(UInt32(view.frame.width - 200)) + 1
 
         imageview.frame = CGRect(origin: CGPoint(x: Int(randomWidth), y: Int(randomHeight)), size: CGSize(width: 200, height: 200))
-        
-        
+		
         view.insertSubview(imageview, belowSubview: crosshair)
         
         let monster = Monster()
