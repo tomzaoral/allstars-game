@@ -52,14 +52,12 @@ class ViewController: UIViewController {
     
     func fire() {
         let crosshairPosition = crosshair.center
-        
-        for m in monsters {
-            if CGRectContainsPoint(m.imageView!.frame, crosshairPosition) {
-                
-                let monsterIndex = monsters.indexOf(m)
-                monsters.removeAtIndex(monsterIndex)
-            }
-        }
+		
+		let index = monsters.indexOf { CGRectContainsPoint($0.imageView!.frame, crosshairPosition) }
+		
+		if let i = index {
+			monsters.removeAtIndex(i)
+		}
 
     }
     
