@@ -20,7 +20,7 @@
                                 <rect key="frame" x="910" y="490" width="100" height="100"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="crosshair" destination="EwI-qB-LW7" id="q78-VH-YLL"/>

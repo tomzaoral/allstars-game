@@ -17,8 +17,14 @@ class ViewController: UIViewController {
         
         let pan = UIPanGestureRecognizer(target: self, action: "move:")
         self.view.addGestureRecognizer(pan)
-        addMonster()
+        
+        let _ = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "addMonster", userInfo: nil, repeats: true)
+        
+        
+
     }
+    
+    var monsters: [Monster] = []
 	
 	var lastPosition: CGPoint = CGPoint(x: 960, y: 540)
     
@@ -42,17 +48,30 @@ class ViewController: UIViewController {
     }
     
     func addMonster() {
-        let monster = UIImageView(image: UIImage(named: "monster_1"))
+        if monsters.count > 5 { return }
         
-        let randomHeight = arc4random_uniform(UInt32(view.frame.height)) + 1
-        let randomWidth = arc4random_uniform(UInt32(view.frame.width)) + 1
+        let imageview = UIImageView(image: UIImage(named: "monster_\(arc4random_uniform(3) + 1)"))
+        
+        let randomHeight = arc4random_uniform(UInt32(view.frame.height - 200)) + 1
+        let randomWidth = arc4random_uniform(UInt32(view.frame.width - 200)) + 1
 
-        monster.frame = CGRect(origin: CGPoint(x: Int(randomWidth), y: Int(randomHeight)), size: CGSize(width: 200, height: 200))
+        imageview.frame = CGRect(origin: CGPoint(x: Int(randomWidth), y: Int(randomHeight)), size: CGSize(width: 200, height: 200))
         
         
-        view.insertSubview(monster, belowSubview: crosshair)
+        view.insertSubview(imageview, belowSubview: crosshair)
+        
+        let monster = Monster()
+        monster.imageView = imageview
+        
+        monsters.append(monster)
     }
 
 
+}
+
+class Monster {
+    
+    var imageView: UIImageView?
+    
 }
 
