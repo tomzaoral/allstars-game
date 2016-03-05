@@ -158,6 +158,9 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="PLAY AGAIN"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="gnC-aK-pKJ"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameover" translatesAutoresizingMaskIntoConstraints="NO" id="29K-fl-j2k">
                                 <rect key="frame" x="385" y="311" width="1150" height="170"/>
@@ -206,4 +209,7 @@
         <image name="hellbg" width="1920" height="1080"/>
         <image name="intro" width="575" height="61"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gnC-aK-pKJ"/>
+    </inferredMetricsTieBreakers>
 </document>
