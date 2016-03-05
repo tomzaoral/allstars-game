@@ -26,12 +26,21 @@ class ViewController: UIViewController {
     }
     
     func move(sender: UIPanGestureRecognizer) {
-        print("a")
+//        if sender.state == .Began {
+//            
+//        }
         
-        let locatedPoint = sender.locationInView(self.view)
+//        if sender.state == .Ended {
+//            
+//        }
         
-        if 0...view.frame.height ~= locatedPoint.y && 0...view.frame.width ~= locatedPoint.x {
-            crosshair.center = locatedPoint
+        if sender.state == .Changed {
+            let locatedPoint = sender.translationInView(self.view)
+            crosshair.center.x
+        
+            if 0...view.frame.height ~= locatedPoint.y && 0...view.frame.width ~= locatedPoint.x {
+                crosshair.center = locatedPoint
+            }
         }
         
         
