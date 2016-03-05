@@ -119,15 +119,77 @@
                         <outlet property="crosshair" destination="EwI-qB-LW7" id="q78-VH-YLL"/>
                         <outlet property="playground" destination="arf-NM-YTo" id="pTN-Fn-WGC"/>
                         <outlet property="scoreView" destination="V3k-sT-dJk" id="mBb-pl-zlp"/>
+                        <segue destination="t7g-nM-duw" kind="show" identifier="EndGameSegue" id="V8P-se-YYF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-333" y="554"/>
         </scene>
+        <!--End View Controller-->
+        <scene sceneID="I4a-ri-fY7">
+            <objects>
+                <viewController id="t7g-nM-duw" customClass="EndViewController" customModule="allstars_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sVX-uF-4wl"/>
+                        <viewControllerLayoutGuide type="bottom" id="y9x-As-ZZw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fe1-Sx-bUN">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4k-Uk-ZHd">
+                                <rect key="frame" x="814" y="681" width="292" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Gdq-aF-DK2"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="PLAY AGAIN"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameover" translatesAutoresizingMaskIntoConstraints="NO" id="29K-fl-j2k">
+                                <rect key="frame" x="385" y="311" width="1150" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1150" id="nEA-oI-zNz"/>
+                                    <constraint firstAttribute="width" secondItem="29K-fl-j2k" secondAttribute="height" multiplier="115:17" id="zyP-Ea-q4B"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9Z-tz-97n">
+                                <rect key="frame" x="910" y="563" width="100" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iC-L0-iOa">
+                                <rect key="frame" x="902" y="524" width="116" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.033069431779999998" green="0.002911911579" blue="0.0086937788870000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O9Z-tz-97n" firstAttribute="centerX" secondItem="Fe1-Sx-bUN" secondAttribute="centerX" id="CF0-fO-mQr"/>
+                            <constraint firstItem="U4k-Uk-ZHd" firstAttribute="centerX" secondItem="Fe1-Sx-bUN" secondAttribute="centerX" id="JFy-a3-oDg"/>
+                            <constraint firstItem="O9Z-tz-97n" firstAttribute="top" secondItem="3iC-L0-iOa" secondAttribute="bottom" constant="8" id="Jng-PP-TJx"/>
+                            <constraint firstItem="3iC-L0-iOa" firstAttribute="centerX" secondItem="Fe1-Sx-bUN" secondAttribute="centerX" id="LFC-5f-aQp"/>
+                            <constraint firstItem="U4k-Uk-ZHd" firstAttribute="top" secondItem="O9Z-tz-97n" secondAttribute="bottom" constant="55" id="RPe-AY-kOf"/>
+                            <constraint firstItem="U4k-Uk-ZHd" firstAttribute="top" secondItem="29K-fl-j2k" secondAttribute="bottom" constant="200" id="VuO-du-sDN"/>
+                            <constraint firstItem="29K-fl-j2k" firstAttribute="centerX" secondItem="Fe1-Sx-bUN" secondAttribute="centerX" id="YvZ-Nf-P2G"/>
+                            <constraint firstItem="y9x-As-ZZw" firstAttribute="top" secondItem="U4k-Uk-ZHd" secondAttribute="bottom" constant="313" id="j2F-uJ-sym"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="O9Z-tz-97n" id="K7v-eq-DxQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0J-WG-YBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="554"/>
+        </scene>
     </scenes>
     <resources>
         <image name="crosshair" width="670" height="669"/>
+        <image name="gameover" width="230" height="34"/>
         <image name="hellbg" width="1920" height="1080"/>
         <image name="intro" width="575" height="61"/>
     </resources>

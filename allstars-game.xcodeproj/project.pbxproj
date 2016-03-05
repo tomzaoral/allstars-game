@@ -15,6 +15,7 @@
 		3D95F9BD1C8ADD60002ABA26 /* allstars_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95F9BC1C8ADD60002ABA26 /* allstars_gameUITests.swift */; };
 		3D95F9CB1C8B277D002ABA26 /* kill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D95F9CA1C8B277D002ABA26 /* kill.mp3 */; };
 		3D95F9CD1C8B28A6002ABA26 /* monsterKill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D95F9CC1C8B28A6002ABA26 /* monsterKill.mp3 */; };
+		BE38D36C1C8B3DB9004ADE5D /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38D36B1C8B3DB9004ADE5D /* EndViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3D95F9BE1C8ADD60002ABA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D95F9CA1C8B277D002ABA26 /* kill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kill.mp3; sourceTree = "<group>"; };
 		3D95F9CC1C8B28A6002ABA26 /* monsterKill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = monsterKill.mp3; sourceTree = "<group>"; };
+		BE38D36B1C8B3DB9004ADE5D /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				3D95F99F1C8ADD60002ABA26 /* AppDelegate.swift */,
 				3D95F9A11C8ADD60002ABA26 /* ViewController.swift */,
+				BE38D36B1C8B3DB9004ADE5D /* EndViewController.swift */,
 				3D95F9A31C8ADD60002ABA26 /* Main.storyboard */,
 				3D95F9A61C8ADD60002ABA26 /* Assets.xcassets */,
 				3D95F9A81C8ADD60002ABA26 /* Info.plist */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE38D36C1C8B3DB9004ADE5D /* EndViewController.swift in Sources */,
 				3D95F9A21C8ADD60002ABA26 /* ViewController.swift in Sources */,
 				3D95F9A01C8ADD60002ABA26 /* AppDelegate.swift in Sources */,
 			);
@@ -480,6 +484,7 @@
 				3D95F9C31C8ADD60002ABA26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D95F9C41C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "allstars-gameTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +493,7 @@
 				3D95F9C61C8ADD60002ABA26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D95F9C71C8ADD60002ABA26 /* Build configuration list for PBXNativeTarget "allstars-gameUITests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +502,7 @@
 				3D95F9C91C8ADD60002ABA26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
