@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="mAC-T4-wZe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,21 +20,29 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smU-vH-ZJO">
                                 <rect key="frame" x="862" y="681" width="196" height="86"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="BH1-BV-7l1"/>
                                     <constraint firstAttribute="height" constant="86" id="lFL-1X-qbY"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="START">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="TjM-nX-K2k"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro" translatesAutoresizingMaskIntoConstraints="NO" id="adq-to-WOT">
+                                <rect key="frame" x="385" y="409" width="1150" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1150" id="5ty-9n-3ku"/>
+                                    <constraint firstAttribute="width" secondItem="adq-to-WOT" secondAttribute="height" multiplier="575:61" id="Wdc-3r-N3m"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.033069431781768799" green="0.002911911578848958" blue="0.0086937788873910904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2c0-W4-IJQ" firstAttribute="top" secondItem="smU-vH-ZJO" secondAttribute="bottom" constant="313" id="L3z-9h-oqo"/>
+                            <constraint firstItem="smU-vH-ZJO" firstAttribute="top" secondItem="adq-to-WOT" secondAttribute="bottom" constant="150" id="Ogq-XN-bh3"/>
+                            <constraint firstItem="adq-to-WOT" firstAttribute="centerX" secondItem="cq2-1L-uMm" secondAttribute="centerX" id="RKC-AS-VDj"/>
                             <constraint firstItem="smU-vH-ZJO" firstAttribute="centerX" secondItem="cq2-1L-uMm" secondAttribute="centerX" id="kcC-Rp-nT5"/>
                         </constraints>
                     </view>
@@ -114,11 +123,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="561"/>
+            <point key="canvasLocation" x="-333" y="554"/>
         </scene>
     </scenes>
     <resources>
         <image name="crosshair" width="670" height="669"/>
         <image name="hellbg" width="1920" height="1080"/>
+        <image name="intro" width="575" height="61"/>
     </resources>
 </document>
