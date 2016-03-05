@@ -32,8 +32,8 @@ class ViewController: UIViewController {
 			
             let translation = sender.translationInView(self.view)
 			
-			let newX = max(min(lastPosition.x + translation.x, 1920), 0)
-			let newY = max(min(lastPosition.y + translation.y, 1080), 0)
+			let newX = max(min(lastPosition.x + translation.x, view.frame.width), 0)
+			let newY = max(min(lastPosition.y + translation.y, view.frame.height), 0)
 			
 			crosshair.center = CGPoint(x: newX, y: newY)
 
@@ -43,7 +43,11 @@ class ViewController: UIViewController {
     
     func addMonster() {
         let monster = UIImageView(image: UIImage(named: "monster_1"))
-        monster.frame = CGRect(origin: CGPoint(x: 600, y: 700), size: CGSize(width: 200, height: 200))
+        
+        let randomHeight = arc4random_uniform(UInt32(view.frame.height)) + 1
+        let randomWidth = arc4random_uniform(UInt32(view.frame.width)) + 1
+
+        monster.frame = CGRect(origin: CGPoint(x: Int(randomWidth), y: Int(randomHeight)), size: CGSize(width: 200, height: 200))
         
         
         view.insertSubview(monster, belowSubview: crosshair)
