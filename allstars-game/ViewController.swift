@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         
         let pan = UIPanGestureRecognizer(target: self, action: "move:")
         self.view.addGestureRecognizer(pan)
+        addMonster()
     }
 	
 	var lastPosition: CGPoint = CGPoint(x: 960, y: 540)
@@ -38,6 +39,14 @@ class ViewController: UIViewController {
 
 		}
         
+    }
+    
+    func addMonster() {
+        let monster = UIImageView(image: UIImage(named: "monster_1"))
+        monster.frame = CGRect(origin: CGPoint(x: 600, y: 700), size: CGSize(width: 200, height: 200))
+        
+        
+        view.insertSubview(monster, belowSubview: crosshair)
     }
 
 
