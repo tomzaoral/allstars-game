@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-qB-LW7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="crosshair" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-qB-LW7">
                                 <rect key="frame" x="1401" y="718" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -30,4 +30,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="crosshair" width="670" height="669"/>
+    </resources>
 </document>
