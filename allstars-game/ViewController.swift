@@ -18,6 +18,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 	
 	var timer: NSTimer?
 	var date: NSDate?
+    
+    var resultTime: Double? = nil
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,9 +68,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 	
 	func updateTime() {
 		
-		let interval = Int(-date!.timeIntervalSinceNow)
-		
-		timeLabel.text = "\(interval) s"
+        if resultTime == nil {
+            
+            let interval = Int(-date!.timeIntervalSinceNow)
+            timeLabel.text = "\(interval) s"
+            
+        }
 	}
     
     var killSoundPlayer = AVAudioPlayer()
@@ -120,7 +125,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             }
             
             if scoreValue == 0 {
-                self.performSegueWithIdentifier("EndGameSegue", sender: self)
+                endGame()
             }
 			
 			UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
@@ -140,6 +145,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 					
 			})
 		}
+    }
+    
+    func endGame() {
+        resultTime = -date!.timeIntervalSinceNow
+        timer?.invalidate()
+        self.performSegueWithIdentifier("EndGameSegue", sender: self)
     }
     
     func addMonster() {
@@ -187,7 +198,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		let vc = segue.destinationViewController as! EndViewController
 		
-		vc.resultTime = Int(-date!.timeIntervalSinceNow)
+		vc.resultTime = resultTime
 	}
 }
 
