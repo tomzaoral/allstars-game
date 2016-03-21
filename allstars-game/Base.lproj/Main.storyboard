@@ -54,7 +54,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="allstars_game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Monster_Kill" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -142,7 +142,7 @@
         <!--End View Controller-->
         <scene sceneID="I4a-ri-fY7">
             <objects>
-                <viewController id="t7g-nM-duw" customClass="EndViewController" customModule="allstars_game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t7g-nM-duw" customClass="EndViewController" customModule="Monster_Kill" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sVX-uF-4wl"/>
                         <viewControllerLayoutGuide type="bottom" id="y9x-As-ZZw"/>
@@ -210,6 +210,6 @@
         <image name="intro" width="575" height="61"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gnC-aK-pKJ"/>
+        <segue reference="TjM-nX-K2k"/>
     </inferredMetricsTieBreakers>
 </document>
