@@ -19,5 +19,9 @@ class EndViewController: UIViewController {
 
         timeLabel.text = "\(resultTime!) s"
     }
+    
+    @IBAction func playAgainButtonPressed(sender: AnyObject) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
 
 }
