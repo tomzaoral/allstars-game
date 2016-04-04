@@ -199,7 +199,7 @@
 				TargetAttributes = {
 					3D95F99B1C8ADD60002ABA26 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = Q6DZF97X83;
+						DevelopmentTeam = EAVQTDVRT7;
 					};
 					3D95F9AC1C8ADD60002ABA26 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -403,7 +403,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "allstars-game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.allstars-game";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strv.hackaton.monsterkill;
 				PRODUCT_NAME = "Monster Kill";
 				PROVISIONING_PROFILE = "";
 			};
@@ -418,7 +418,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "allstars-game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "hackaton.allstars-game";
+				PRODUCT_BUNDLE_IDENTIFIER = com.strv.hackaton.monsterkill;
 				PRODUCT_NAME = "Monster Kill";
 				PROVISIONING_PROFILE = "";
 			};
